@@ -17,12 +17,22 @@ assumed to be a console input. Use a sorting method
 
 #Get user input.
 
+<<<<<<< HEAD
 userlist = raw_input('Enter your List separated by a comma:\n')
+=======
+userlist = input('Enter your List separated by a comma:\n')
+>>>>>>> 5e4fb5ef7dbf9edd02d007b46cc4dceb60265dab
 
 #Convert user input to a list
 listitems = userlist.split(',')
 
+<<<<<<< HEAD
 print"Your items are: ",listitems
 # to sort the list
 sorteditems=sorted(listitems)
 print"Your sorted items are: ",sorteditems
+=======
+print("Your list is: ", listitems)
+
+print(sorted(listitems))
+>>>>>>> 5e4fb5ef7dbf9edd02d007b46cc4dceb60265dab
