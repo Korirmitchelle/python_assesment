@@ -1,4 +1,4 @@
-""""
+"""
 Question: 1
 
 Write a program that accepts a comma separated sequence of words as input and
@@ -17,9 +17,12 @@ assumed to be a console input. Use a sorting method
 
 #Get user input.
 
-lst = input('Enter your List separated by a comma:\n')
+userlist = raw_input('Enter your List separated by a comma:\n')
 
 #Convert user input to a list
-items = lst.split(',')
+listitems = userlist.split(',')
 
-print(items)
+print"Your items are: ",listitems
+# to sort the list
+sorteditems=sorted(listitems)
+print"Your sorted items are: ",sorteditems
