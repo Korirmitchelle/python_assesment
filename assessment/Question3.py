@@ -15,3 +15,6 @@ Hints: In case of input data being supplied to the question, it should be
 assumed to be a console input. Use list and .join
 
 """
+
+numbers = raw_input("Enter numbers to check separated by a comma:\n")
+numlist = numbers.split(',')
