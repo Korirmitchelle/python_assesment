@@ -32,4 +32,11 @@ def keypresses(key):
     return keys[key]
 
 if __name__ == "__main__":
-    
+    userinput=raw_input("What word would you like to input?: \n").upper()
+    presses = 0
+    for key in userinput:
+        presses += int(keypresses(key))
+    print("The number of presses to \"" + userinput.lower() + "\" are " + str(presses))
+
+
+
