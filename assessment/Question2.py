@@ -13,14 +13,14 @@ Hints: In case of input data being supplied to the question,
 it should be assumed to be a console input. Use list and append
 
 """
-print("Enter your Lines:\n")
+print("Enter your Lines. Please press 1 to submit:\n")
 
 userlines = []
 
 terminate = '1'
 
 for line in iter(raw_input, terminate):
-    userlines.append(line)
+    userlines.append(line.upper())
     pass
-
-print(userlines)
+for item in userlines:
+    print(item)
