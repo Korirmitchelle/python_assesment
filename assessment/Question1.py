@@ -17,9 +17,11 @@ assumed to be a console input. Use a sorting method
 
 #Get user input.
 
-lst = input('Enter your List separated by a comma:\n')
+userlist = input('Enter your List separated by a comma:\n')
 
 #Convert user input to a list
-items = lst.split(',')
+listitems = userlist.split(',')
 
-print(items)
+print("Your list is: ", listitems)
+
+print(sorted(listitems))
