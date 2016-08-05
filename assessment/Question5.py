@@ -1,10 +1,35 @@
-def swapCase(str):
-    str1 = ""
-    for i in range(len(str)):
-        if str[i].isupper():
-            str1 += str[i].lower()
-        else:
-            str1 += str[i].upper()
-    print(str1)
+"""
 
-swapCase("Hello World")
+Before predictive text entry systems like T9, you had to press a button
+repeatedly to cycle through the possible values until you reached the one
+you wanted.
+
+For example, to type "V8" you would press the 8 key three times and then
+again four times (pressing the 8 key cycles through T->U->V->8), giving us
+a total of seven key presses.
+
+Note: the 0 key handles spaces and outputs 0 when tapped twice.
+
+Write a function that can calculate the amount of button presses required
+for any phrase. Except for spaces, punctuation can be ignored. Your function
+should accept both uppercase and lowercase letters and treat them the same.
+
+Examples: presses('V8') # 7 presses('LOL') # 9 presses('How R u 2day') # 23
+
+Bonus: Try to avoid hard-coding the number of button presses for each letter! Resource:
+    Use python Dictionaries in this exercise
+
+"""
+
+def keypresses(key):
+    keys = {
+        "1":1, "2":4, "3":4, "4":4, "5":4, "6":4, "7":5, "8":4, "9":5, "*":1, "0":2, "#":1,
+        " ":1, "A":1, "B":2, "C":3, "D":1, "E":2, "F":3, "G":1, "H":2, "I":3, "J":1, "K":2,
+        "L":3, "M":1, "N":2, "O":3, "P":1, "Q":2, "R":3, "S":4, "T":1, "U":2, "V":3, "W":1,
+        "X":2, "Y":3, "Z":4
+    }
+
+    return keys[key]
+
+if __name__ == "__main__":
+    
