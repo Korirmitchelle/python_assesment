@@ -17,4 +17,20 @@ assumed to be a console input. Use list and .join
 """
 
 numbers = raw_input("Enter numbers to check separated by a comma:\n")
+
+def isBinary(num):
+    for i in range(len(num)):
+        if int(num[i]) <= 1 and int(num[i]) >= 0:
+            return True
+        else:
+            return False
+
 numlist = numbers.split(',')
+numberlist=[]
+for num in numlist:
+    if isBinary(num) and len(num) == 4:
+        if int(num)%5==0:
+            numberlist.append(num)
+
+print(', '.join(numberlist))
+
